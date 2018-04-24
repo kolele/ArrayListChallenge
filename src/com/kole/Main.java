@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         MobilePhone.addContact("kole",123456);
-
+        MobilePhone.printContacts();
 
     }
 }
