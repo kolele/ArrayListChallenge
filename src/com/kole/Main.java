@@ -6,6 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MobilePhone.createContact("Kole","kole",123456);
+        MobilePhone.addContact("kole",123456);
+
+
     }
 }
