@@ -36,7 +36,19 @@ public class MobilePhone extends Contacts {
         }return false;
     }
 
-    public static void updateContact(){
+    public static int getPosition(String name){
+        for (int i=0;i<contact.size();i++){
+            return contact.indexOf(name);
+        }
+    }
+
+    public static void updateContact(String name, int number){
+        boolean check = checkIfExists(name);
+        if (check==false){
+            System.out.println("Contact does not exist");
+        } else {
+
+        }
 
     }
 
