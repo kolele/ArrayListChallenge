@@ -39,7 +39,7 @@ public class MobilePhone extends Contacts {
     public static int getPosition(String name){
         for (int i=0;i<contact.size();i++){
             return contact.indexOf(name);
-        }
+        } return -1;
     }
 
     public static void updateContact(String name, int number){

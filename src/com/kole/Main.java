@@ -14,6 +14,7 @@ public class Main {
         System.out.println("*********************************************");
         boolean test = MobilePhone.checkIfExists("somina");
         System.out.println(test);
-        System.out.println(MobilePhone.contact.get(1));
+        int kobas = MobilePhone.getPosition("sale");
+        System.out.println(kobas);
     }
 }
