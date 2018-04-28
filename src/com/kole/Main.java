@@ -12,9 +12,9 @@ public class Main {
         MobilePhone.addContact("konjina", 98547);
         MobilePhone.printContacts();
         System.out.println("*********************************************");
-        boolean test = MobilePhone.checkIfExists("somina");
+        boolean test = MobilePhone.checkIfExists("kole");
         System.out.println(test);
-        int kobas = MobilePhone.getPosition("sale");
+        int kobas = MobilePhone.getPosition("konjina");
         System.out.println(kobas);
     }
 }
