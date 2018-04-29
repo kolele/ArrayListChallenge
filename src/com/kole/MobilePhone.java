@@ -38,10 +38,9 @@ public class MobilePhone extends Contacts {
 
     public static int getPosition(String name){
         for (int i=0;i<contact.size();i++){
-            if (contact.get(i).getName() == name){
-                return contact.get(i).getName().indexOf(name);
+            if (contact.get(i).getName().equals(name)){
+                return i+1;
             }
-
         }return -1;
     }
 
@@ -50,6 +49,7 @@ public class MobilePhone extends Contacts {
         if (check==false){
             System.out.println("Contact does not exist");
         } else {
+
 
         }
 
