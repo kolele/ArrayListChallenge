@@ -12,7 +12,7 @@ public class MobilePhone extends Contacts {
 
     public static void addContact(String name, int number) {
         boolean check = checkIfExists(name);
-        if (check==false){
+        if (check == false) {
             Contacts contact = new Contacts(name, number);
             MobilePhone.contact.add(contact);
             System.out.println("Added contact named " + contact.getName() + " with number " + contact.getPhoneNumber());
@@ -28,35 +28,41 @@ public class MobilePhone extends Contacts {
         }
     }
 
-    public static boolean checkIfExists(String name){
-        for (int i=0;i<contact.size();i++){
-            if (contact.get(i).getName().contains(name)){
+    public static boolean checkIfExists(String name) {
+        for (int i = 0; i < contact.size(); i++) {
+            if (contact.get(i).getName().contains(name)) {
                 return true;
             }
-        }return false;
+        }
+        return false;
     }
 
-    public static int getPosition(String name){
-        for (int i=0;i<contact.size();i++){
-            if (contact.get(i).getName().equals(name)){
-                return i+1;
+    public static int getPosition(String name) {
+        for (int i = 0; i < contact.size(); i++) {
+            if (contact.get(i).getName().equals(name)) {
+                return i + 1;
             }
-        }return -1;
+        }
+        return -1;
     }
 
-    public static void updateContact(String name, int number){
+    public static void updateContact(String name, int number) {
         boolean check = checkIfExists(name);
-        if (check==false){
+        int position = getPosition(name);
+
+        if (check == false) {
             System.out.println("Contact does not exist");
         } else {
-
-
+            contact.get(position-1).setName(name);
+            contact.get(position-1).setPhoneNumber(number);
         }
+
 
     }
 
-    public static void removeContact(){
-
+    public static void removeContact(int position) {
+        contact.remove(position - 1);
+        System.out.println("Contact removed");
     }
 
 
