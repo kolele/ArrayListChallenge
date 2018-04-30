@@ -12,7 +12,7 @@ public class MobilePhone extends Contacts {
 
     public static void addContact(String name, int number) {
         boolean check = checkIfExists(name);
-        if (check == false) {
+        if (!check) {
             Contacts contact = new Contacts(name, number);
             MobilePhone.contact.add(contact);
             System.out.println("Added contact named " + contact.getName() + " with number " + contact.getPhoneNumber());
@@ -50,7 +50,7 @@ public class MobilePhone extends Contacts {
         boolean check = checkIfExists(name);
         int position = getPosition(name);
 
-        if (check == false) {
+        if (!check) {
             System.out.println("Contact does not exist");
         } else {
             contact.get(position-1).setName(name);
